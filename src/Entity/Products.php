@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\ProductsRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -37,6 +39,24 @@ class Products
     #[ORM\ManyToOne(inversedBy: 'products')]
     #[ORM\JoinColumn(nullable: false)]
     private ?sizes $size_id = null;
+
+    /**
+     * @var Collection<int, Questions>
+     */
+    #[ORM\OneToMany(targetEntity: Questions::class, mappedBy: 'product_id', orphanRemoval: true)]
+    private Collection $questions;
+
+    /**
+     * @var Collection<int, Comments>
+     */
+    #[ORM\OneToMany(targetEntity: Comments::class, mappedBy: 'product_id', orphanRemoval: true)]
+    private Collection $comments;
+
+    public function __construct()
+    {
+        $this->questions = new ArrayCollection();
+        $this->comments = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -123,6 +143,66 @@ class Products
     public function setSizeId(?sizes $size_id): static
     {
         $this->size_id = $size_id;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Questions>
+     */
+    public function getQuestions(): Collection
+    {
+        return $this->questions;
+    }
+
+    public function addQuestion(Questions $question): static
+    {
+        if (!$this->questions->contains($question)) {
+            $this->questions->add($question);
+            $question->setProductId($this);
+        }
+
+        return $this;
+    }
+
+    public function removeQuestion(Questions $question): static
+    {
+        if ($this->questions->removeElement($question)) {
+            // set the owning side to null (unless already changed)
+            if ($question->getProductId() === $this) {
+                $question->setProductId(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Comments>
+     */
+    public function getComments(): Collection
+    {
+        return $this->comments;
+    }
+
+    public function addComment(Comments $comment): static
+    {
+        if (!$this->comments->contains($comment)) {
+            $this->comments->add($comment);
+            $comment->setProductId($this);
+        }
+
+        return $this;
+    }
+
+    public function removeComment(Comments $comment): static
+    {
+        if ($this->comments->removeElement($comment)) {
+            // set the owning side to null (unless already changed)
+            if ($comment->getProductId() === $this) {
+                $comment->setProductId(null);
+            }
+        }
 
         return $this;
     }
