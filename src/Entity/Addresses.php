@@ -25,6 +25,10 @@ class Addresses
     #[ORM\Column(length: 255)]
     private ?string $house_number = null;
 
+    #[ORM\ManyToOne]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?user $user_id = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -74,6 +78,18 @@ class Addresses
     public function setHouseNumber(string $house_number): static
     {
         $this->house_number = $house_number;
+
+        return $this;
+    }
+
+    public function getUserId(): ?user
+    {
+        return $this->user_id;
+    }
+
+    public function setUserId(?user $user_id): static
+    {
+        $this->user_id = $user_id;
 
         return $this;
     }

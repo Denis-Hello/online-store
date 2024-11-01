@@ -24,6 +24,10 @@ class Comments
     #[ORM\JoinColumn(nullable: false)]
     private ?products $product_id = null;
 
+    #[ORM\ManyToOne]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?user $user_id = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -61,6 +65,18 @@ class Comments
     public function setProductId(?products $product_id): static
     {
         $this->product_id = $product_id;
+
+        return $this;
+    }
+
+    public function getUserId(): ?user
+    {
+        return $this->user_id;
+    }
+
+    public function setUserId(?user $user_id): static
+    {
+        $this->user_id = $user_id;
 
         return $this;
     }
