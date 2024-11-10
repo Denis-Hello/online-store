@@ -27,11 +27,11 @@ class Order
     private ?int $total_amount = null;
 
     #[ORM\ManyToOne]
-    #[ORM\JoinColumn(nullable: false)]
+    #[ORM\JoinColumn(name: "dilivery_addres_id", nullable: false)]
     private ?addresses $dilivery_addres_id = null;
 
     #[ORM\ManyToOne]
-    #[ORM\JoinColumn(nullable: false)]
+    #[ORM\JoinColumn(name: "user_id", nullable: false)]
     private ?user $user_id = null;
 
     public function getId(): ?int

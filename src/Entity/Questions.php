@@ -21,11 +21,11 @@ class Questions
     private ?\DateTimeImmutable $created_at = null;
 
     #[ORM\ManyToOne(inversedBy: 'questions')]
-    #[ORM\JoinColumn(nullable: false)]
+    #[ORM\JoinColumn(name: "product_id", nullable: false)]
     private ?products $product_id = null;
 
     #[ORM\ManyToOne]
-    #[ORM\JoinColumn(nullable: false)]
+    #[ORM\JoinColumn(name: "user_id", nullable: false)]
     private ?user $user_id = null;
 
     public function getId(): ?int

@@ -17,7 +17,7 @@ class ProductPhotos
     private ?string $photo_url = null;
 
     #[ORM\ManyToOne]
-    #[ORM\JoinColumn(nullable: false)]
+    #[ORM\JoinColumn(name: "product_id", nullable: false)]
     private ?products $product_id = null;
 
     public function getId(): ?int

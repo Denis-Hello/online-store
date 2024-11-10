@@ -21,7 +21,7 @@ class Answers
     private ?\DateTimeImmutable $created_at = null;
 
     #[ORM\OneToOne]
-    #[ORM\JoinColumn(nullable: false)]
+    #[ORM\JoinColumn(name: "question_id", nullable: false)]
     private ?questions $question_id = null;
 
     public function getId(): ?int

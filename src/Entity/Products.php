@@ -29,15 +29,15 @@ class Products
     private ?int $gender = null;
 
     #[ORM\ManyToOne(inversedBy: 'products')]
-    #[ORM\JoinColumn(nullable: false)]
+    #[ORM\JoinColumn(name: "brand_id", nullable: false)]
     private ?brands $brand_id = null;
 
     #[ORM\ManyToOne(inversedBy: 'products')]
-    #[ORM\JoinColumn(nullable: false)]
+    #[ORM\JoinColumn(name: "category_id", nullable: false)]
     private ?categories $category_id = null;
 
     #[ORM\ManyToOne(inversedBy: 'products')]
-    #[ORM\JoinColumn(nullable: false)]
+    #[ORM\JoinColumn(name: "size_id", nullable: false)]
     private ?sizes $size_id = null;
 
     /**
