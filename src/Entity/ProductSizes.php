@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\ProductSizesRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ProductSizesRepository::class)]
@@ -10,10 +11,10 @@ class ProductSizes
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column]
+    #[ORM\Column(type: Types::INTEGER)]
     private ?int $id = null;
 
-    #[ORM\Column]
+    #[ORM\Column(type: Types::INTEGER)]
     private ?int $stock = null;
 
     #[ORM\OneToOne]

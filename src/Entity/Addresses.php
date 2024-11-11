@@ -3,26 +3,28 @@
 namespace App\Entity;
 
 use App\Repository\AddressesRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use PHPUnit\Util\Type;
 
 #[ORM\Entity(repositoryClass: AddressesRepository::class)]
 class Addresses
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column]
+    #[ORM\Column(type: Types::INTEGER)]
     private ?int $id = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(type: Types::STRING,length: 255)]
     private ?string $region = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(type: Types::STRING,length: 255)]
     private ?string $city = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(type: Types::STRING,length: 255)]
     private ?string $street = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(type: Types::STRING,length: 255)]
     private ?string $house_number = null;
 
     #[ORM\ManyToOne]

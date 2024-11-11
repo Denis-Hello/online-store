@@ -5,13 +5,14 @@ namespace App\Entity;
 use App\Repository\QuestionsRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use PHPUnit\Util\Type;
 
 #[ORM\Entity(repositoryClass: QuestionsRepository::class)]
 class Questions
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column]
+    #[ORM\Column(type: Types::INTEGER)]
     private ?int $id = null;
 
     #[ORM\Column(type: Types::TEXT)]

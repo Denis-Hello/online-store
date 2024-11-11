@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\ProductPhotosRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ProductPhotosRepository::class)]
@@ -10,10 +11,10 @@ class ProductPhotos
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column]
+    #[ORM\Column(type: Types::INTEGER)]
     private ?int $id = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(type: Types::STRING,length: 255)]
     private ?string $photo_url = null;
 
     #[ORM\ManyToOne]
