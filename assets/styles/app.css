@@ -1,7 +1,9 @@
 html {
     box-sizing: border-box;
 }
-
+ body {
+     font-family: 'OpenSans',sans-serif;
+ }
 *,
 *::before,
 *::after {
@@ -27,6 +29,46 @@ p {
     margin: 0;
 }
 
+@font-face {
+    font-family: "OpenSans";
+    src: local("OpenSans-Regular"),
+    url(../fonts/OpenSans-Regular.woff2) format("woff2"),
+    url(../fonts/OpenSans-Regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: local("OpenSans-SemiBold"),
+    url(../fonts/OpenSans-SemiBold.woff2) format("woff2"),
+    url(../fonts/OpenSans-SemiBold.woff) format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: local("OpenSans-Bold"),
+    url(../fonts/OpenSans-Bold.woff2) format("woff2"),
+    url(../fonts/OpenSans-Bold.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --white: #FFFFFF;
+    --light_gray: #F6F6F6;
+    --medium_gray: #EDEEF2;
+    --gray: #BEBCBD;
+    --dark_grey: #807D7E;
+    --dark: #3C4242;
+    --purple: #8A33FD
+}
+
 .container {
     max-width: 1240px;
     margin: 0 auto;
@@ -46,11 +88,19 @@ p {
 }
 
 /*header*/
+.container_header {
+    height: 108px;
+    border-bottom: var(--gray) solid 2px;
+}
 
 .header {
     padding: 30px 0;
     display: flex;
     justify-content: space-between;
+}
+
+.header__logo-link:focus {
+    outline: var(--purple) solid 1px;
 }
 
 .header__nav-container {
@@ -70,6 +120,68 @@ p {
     align-items: center;
 }
 
+.header__nav-items {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark_grey);
+}
+
+.header__nav-link:focus {
+    outline: var(--purple) solid 1px;
+}
+
+.header__search-box {
+    min-width: 267px;
+    padding: 13px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    background-color: var(--light_gray);
+}
+
+.header__search-form {
+    display: inline-flex;
+    flex-grow: 1;
+}
+
+.header__search {
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+    color: var(--dark);
+
+}
+
+.header__search::-webkit-search-cancel-button {
+    display: none;
+}
+
+.header__search:focus {
+    outline: none;
+}
+
+.header__search-button:focus .header__search-button-svg path {
+    fill: var(--purple);
+}
+
+.header__search-button-svg path{
+    transition: fill 0.1s ease-in-out;
+}
+
+.header__search-button:hover .header__search-button-svg path{
+   fill: var(--purple);
+}
+
+.header__search-button {
+    padding-left: 5px;
+}
+
+.header__search-button:focus {
+    outline: none;
+}
+
 .header__button {
     max-width: 156px;
     display: flex;
@@ -77,9 +189,66 @@ p {
     flex-grow: 1;
 }
 
-.header__button-items {
+.header__button-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-grow: 1;
 }
+
+.header__button-items {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background-color: var(--light_gray);
+    transition: outline-color 0.1s ease-in-out;
+}
+
+.header__button-items:hover {
+   outline: var(--purple) solid 1px;
+}
+
+.header__button-items:focus {
+   outline: var(--purple) solid 1px;
+}
+
+.header__button-svg-like path {
+    transition: stroke 0.1s ease-in-out;
+}
+
+.header__button-svg-account path {
+    transition: stroke 0.1s ease-in-out;
+}
+
+.header__button-svg-basket path {
+    transition: stroke 0.1s ease-in-out;
+}
+
+.header__button-items:hover .header__button-svg-like path {
+    stroke: var(--purple);
+}
+
+.header__button-items:hover .header__button-svg-account path {
+    stroke: var(--purple);
+}
+
+.header__button-items:hover .header__button-svg-basket path{
+    stroke: var(--purple);
+}
+
+.header__button-items:focus .header__button-svg-like path {
+    stroke: var(--purple);
+}
+
+.header__button-items:focus .header__button-svg-account path {
+    stroke: var(--purple);
+}
+
+.header__button-items:focus .header__button-svg-basket path{
+    stroke: var(--purple);
+}
+
+/*footer*/
+
+
+
