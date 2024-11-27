@@ -250,5 +250,53 @@ p {
 
 /*footer*/
 
+.container__footer {
+    padding: 60px;
+    background-color: var(--dark);
+}
+
+.footer__up {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__block-title {
+    padding-bottom: 60px;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.footer__items {
+    padding-bottom: 40px;
+    font-size: 18px;
+    color: var(--white);
+}
+
+.footer__link {
+    transition: color 0.1s ease-in-out;
+}
+
+.footer__link:hover {
+    color: var(--purple);
+}
+
+.footer__link:focus {
+    outline: var(--purple) solid 1px;
+    color: var(--purple);
+}
+
+.footer__address-item {
+    padding-bottom: 40px;
+    font-size: 18px;
+    color: var(--white);
+}
+
+.footer__copyright {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+}
 
 

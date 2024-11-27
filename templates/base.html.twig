@@ -19,7 +19,7 @@
                     <header class="header">
                         <div class="header__logo">
                             <a class="header__logo-link" href="#">
-                                <img src="{{ asset('images/logo.png') }}">
+                                <img src="{{ asset('images/logo.png') }}" alt="логотип сайта">
                             </a>
                         </div>
                         <div class="header__nav-container">
@@ -97,84 +97,94 @@
             <div class="container__footer">
                 <div class="container">
                     <footer class="footer">
-                        <ul class="footer__help list-reset">
-                            <li class="footer__help-items">
-                                <a href="#" class="footer_help-link">
-                                    Наши контакты
-                                </a>
-                            </li>
-                            <li class="footer__help-items">
-                                <a href="#" class="footer_help-link">
-                                    Возвраты и возмещения
-                                </a>
-                            </li>
-                            <li class="footer__help-items">
-                                <a href="#" class="footer_help-link">
-                                    Часто задаваемые вопросы
-                                </a>
-                            </li>
-                            <li class="footer__help-items">
-                                <a href="#" class="footer_help-link">
-                                    Карьера
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="footer__company list-reset">
-                            <li class="footer__company-items">
-                                <a href="#" class="footer__company-link">
+                        <div class="footer__up">
+                            <div class="footer__block-help">
+                                <h3 class="footer__block-title">
+                                    Помощь
+                                </h3>
+                                <ul class="footer__help footer__item list-reset">
+                                    <li class="footer__help-items footer__items">
+                                        <a href="#" class="footer_help-link footer__link">
+                                            Возвраты и возмещения
+                                        </a>
+                                    </li>
+                                    <li class="footer__help-items footer__items">
+                                        <a href="#" class="footer_help-link footer__link">
+                                            Часто задаваемые вопросы
+                                        </a>
+                                    </li>
+                                    <li class="footer__help-items footer__items">
+                                        <a href="#" class="footer_help-link footer__link">
+                                            Карьера
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer__block-company">
+                                <h3 class="footer__block-title">
                                     О нас
-                                </a>
-                            </li>
-                            <li class="footer__company-items">
-                                <a href="#" class="footer__company-link">
-                                    Средства массовой информации
-                                </a>
-                            </li>
-                            <li class="footer__company-items">
-                                <a href="#" class="footer__company-link">
-                                    Сотрудничество
-                                </a>
-                            </li>
-                            <li class="footer__company-items">
-                                <a href="#" class="footer__company-link">
-                                    Наши предложения
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="footer__info list-reset">
-                            <li class="footer__info-items">
-                                <a href="#" class="footer__info-link">
-                                    Срок и условия
-                                </a>
-                            </li>
-                            <li class="footer__info-items">
-                                <a href="#" class="footer__info-link">
-                                    Политика конфиденциальности
-                                </a>
-                            </li>
-                            <li class="footer__info-items">
-                                <a href="#" class="footer__info-link">
-                                    Политика доставки
-                                </a>
-                            </li>
-                            <li class="footer__info-items">
-                                <a href="#" class="footer__info-link">
-                                    Карта сайта
-                                </a>
-                            </li>
-                        </ul>
-                        <address class="footer__address">
-                            <ul class="footer__address-item list-reset">
-                                <li class="footer__address-mail">
-                                    Адрес электронной почты:<br>
-                                    xassexikoitu-4274@yopmail.ru
-                                </li>
-                                <li class="footer__address-street">
-                                    Наш адрес:<br>
-                                    город Сказок, улица удач, дом 53
-                                </li>
-                            </ul>
-                        </address>
+                                </h3>
+                                <ul class="footer__company footer__item list-reset">
+                                    <li class="footer__company-items footer__items">
+                                        <a href="#" class="footer__company-link footer__link">
+                                            Средства массовой информации
+                                        </a>
+                                    </li>
+                                    <li class="footer__company-items footer__items">
+                                        <a href="#" class="footer__company-link footer__link">
+                                            Сотрудничество
+                                        </a>
+                                    </li>
+                                    <li class="footer__company-items footer__items">
+                                        <a href="#" class="footer__company-link footer__link">
+                                            Наши предложения
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer__block-info">
+                                <h3 class="footer__block-title">
+                                    Сроки и условия
+                                </h3>
+                                <ul class="footer__info footer__item list-reset">
+                                    <li class="footer__info-items footer__items">
+                                        <a href="#" class="footer__info-link footer__link">
+                                            Политика конфиденциальности
+                                        </a>
+                                    </li>
+                                    <li class="footer__info-items footer__items">
+                                        <a href="#" class="footer__info-link footer__link">
+                                            Политика доставки
+                                        </a>
+                                    </li>
+                                    <li class="footer__info-items footer__items">
+                                        <a href="#" class="footer__info-link footer__link">
+                                            Карта сайта
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <address class="footer__address">
+                                <h3 class="footer__block-title">
+                                    Как нас найти
+                                </h3>
+                                <ul class="footer__address-item list-reset">
+                                    <li class="footer__address-mail footer__items">
+                                        Адрес электронной почты:<br>
+                                        xassexikoitu-4274@yopmail.ru
+                                    </li>
+                                    <li class="footer__address-street footer__items">
+                                        Наш адрес:<br>
+                                        город Сказок, улица Удач, дом №53
+                                    </li>
+                                </ul>
+                            </address>
+                        </div>
+                        <div class="footer__down">
+                            <p class="footer__copyright">
+                                Copyright © 2024  Folks Pvt Ltd. All rights reserved.
+                            </p>
+                        </div>
                     </footer>
                 </div>
             </div>
