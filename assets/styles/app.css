@@ -87,14 +87,12 @@ p {
     cursor: pointer;
 }
 
-/*header*/
-.container_header {
-    height: 108px;
-    border-bottom: var(--gray) solid 2px;
-}
+/**********HEADER**********/
 
-.header {
+.header__container {
+    height: 108px;
     padding: 30px 0;
+    border-bottom: var(--gray) solid 2px;
     display: flex;
     justify-content: space-between;
 }
@@ -126,8 +124,17 @@ p {
     color: var(--dark_grey);
 }
 
+.header__nav-link {
+    transition: color 0.15s ease-in-out;
+}
+
+.header__nav-link:hover {
+    color: var(--purple);
+}
+
 .header__nav-link:focus {
-    outline: var(--purple) solid 1px;
+    outline: none;
+    color: var(--purple);
 }
 
 .header__search-box {
@@ -167,7 +174,7 @@ p {
 }
 
 .header__search-button-svg path{
-    transition: fill 0.1s ease-in-out;
+    transition: fill 0.15s ease-in-out;
 }
 
 .header__search-button:hover .header__search-button-svg path{
@@ -197,31 +204,30 @@ p {
 }
 
 .header__button-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 44px;
     height: 44px;
     border-radius: 10px;
     background-color: var(--light_gray);
-    transition: outline-color 0.1s ease-in-out;
-}
-
-.header__button-items:hover {
-   outline: var(--purple) solid 1px;
+    cursor: pointer;
 }
 
 .header__button-items:focus {
-   outline: var(--purple) solid 1px;
+    outline: none;
 }
 
 .header__button-svg-like path {
-    transition: stroke 0.1s ease-in-out;
+    transition: stroke 0.15s ease-in-out;
 }
 
 .header__button-svg-account path {
-    transition: stroke 0.1s ease-in-out;
+    transition: stroke 0.15s ease-in-out;
 }
 
 .header__button-svg-basket path {
-    transition: stroke 0.1s ease-in-out;
+    transition: stroke 0.15s ease-in-out;
 }
 
 .header__button-items:hover .header__button-svg-like path {
@@ -248,9 +254,9 @@ p {
     stroke: var(--purple);
 }
 
-/*footer*/
+/**********FOOTER**********/
 
-.container__footer {
+.footer {
     padding: 60px;
     background-color: var(--dark);
 }
@@ -274,7 +280,7 @@ p {
 }
 
 .footer__link {
-    transition: color 0.1s ease-in-out;
+    transition: color 0.15s ease-in-out;
 }
 
 .footer__link:hover {
@@ -282,7 +288,7 @@ p {
 }
 
 .footer__link:focus {
-    outline: var(--purple) solid 1px;
+    outline: none;
     color: var(--purple);
 }
 
