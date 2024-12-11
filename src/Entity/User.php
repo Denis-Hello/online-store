@@ -18,7 +18,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: Types::INTEGER)]
     private ?int $id = null;
 
-    #[ORM\Column(type: Types::STRING,length: 180)]
+    #[ORM\Column(type: Types::STRING, length: 180)]
     private ?string $email = null;
 
     /**
@@ -33,13 +33,13 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: Types::JSON)]
     private ?string $password = null;
 
-    #[ORM\Column(type: Types::STRING,length: 255)]
+    #[ORM\Column(type: Types::STRING, length: 255)]
     private ?string $name = null;
 
-    #[ORM\Column(type: Types::STRING,length: 255)]
+    #[ORM\Column(type: Types::STRING, length: 255)]
     private ?string $surname = null;
 
-    #[ORM\Column(type: Types::STRING,length: 255)]
+    #[ORM\Column(type: Types::STRING, length: 255)]
     private ?string $patronymic = null;
 
     #[ORM\Column(type: Types::INTEGER)]

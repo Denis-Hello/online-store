@@ -5,7 +5,6 @@ namespace App\Entity;
 use App\Repository\OrderRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-use PHPUnit\Util\Type;
 
 #[ORM\Entity(repositoryClass: OrderRepository::class)]
 #[ORM\Table(name: '`order`')]
@@ -22,18 +21,18 @@ class Order
     #[ORM\Column(type: Types::INTEGER)]
     private ?int $status = null;
 
-    #[ORM\Column(type: Types::INTEGER,nullable: true)]
+    #[ORM\Column(type: Types::INTEGER, nullable: true)]
     private ?int $discount = null;
 
     #[ORM\Column(type: Types::INTEGER)]
     private ?int $total_amount = null;
 
     #[ORM\ManyToOne]
-    #[ORM\JoinColumn(name: "dilivery_addres_id", nullable: false)]
+    #[ORM\JoinColumn(name: 'dilivery_addres_id', nullable: false)]
     private ?addresses $dilivery_addres_id = null;
 
     #[ORM\ManyToOne]
-    #[ORM\JoinColumn(name: "user_id", nullable: false)]
+    #[ORM\JoinColumn(name: 'user_id', nullable: false)]
     private ?user $user_id = null;
 
     public function getId(): ?int

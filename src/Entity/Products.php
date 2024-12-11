@@ -16,7 +16,7 @@ class Products
     #[ORM\Column(type: Types::INTEGER)]
     private ?int $id = null;
 
-    #[ORM\Column(type: Types::STRING,length: 255)]
+    #[ORM\Column(type: Types::STRING, length: 255)]
     private ?string $name = null;
 
     #[ORM\Column(type: Types::TEXT)]
@@ -29,15 +29,15 @@ class Products
     private ?int $gender = null;
 
     #[ORM\ManyToOne(inversedBy: 'products')]
-    #[ORM\JoinColumn(name: "brand_id", nullable: false)]
+    #[ORM\JoinColumn(name: 'brand_id', nullable: false)]
     private ?brands $brand_id = null;
 
     #[ORM\ManyToOne(inversedBy: 'products')]
-    #[ORM\JoinColumn(name: "category_id", nullable: false)]
+    #[ORM\JoinColumn(name: 'category_id', nullable: false)]
     private ?categories $category_id = null;
 
     #[ORM\ManyToOne(inversedBy: 'products')]
-    #[ORM\JoinColumn(name: "size_id", nullable: false)]
+    #[ORM\JoinColumn(name: 'size_id', nullable: false)]
     private ?sizes $size_id = null;
 
     /**

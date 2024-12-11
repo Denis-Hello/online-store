@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -8,8 +9,8 @@ use Symfony\Component\Routing\Attribute\Route;
 class test extends AbstractController
 {
     #[Route('/test')]
-    public function go():Response
+    public function go(): Response
     {
-        return $this->render('base.html.twig');
+        return $this->render('home/home_page.html.twig');
     }
 }

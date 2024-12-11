@@ -21,11 +21,11 @@ class OrderItem
     private ?int $price = null;
 
     #[ORM\ManyToOne]
-    #[ORM\JoinColumn(name: "order_id", nullable: false)]
+    #[ORM\JoinColumn(name: 'order_id', nullable: false)]
     private ?order $order_id = null;
 
     #[ORM\OneToOne]
-    #[ORM\JoinColumn(name: "product_id", nullable: false)]
+    #[ORM\JoinColumn(name: 'product_id', nullable: false)]
     private ?products $product_id = null;
 
     public function getId(): ?int

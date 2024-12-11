@@ -14,11 +14,11 @@ class ProductPhotos
     #[ORM\Column(type: Types::INTEGER)]
     private ?int $id = null;
 
-    #[ORM\Column(type: Types::STRING,length: 255)]
+    #[ORM\Column(type: Types::STRING, length: 255)]
     private ?string $photo_url = null;
 
     #[ORM\ManyToOne]
-    #[ORM\JoinColumn(name: "product_id", nullable: false)]
+    #[ORM\JoinColumn(name: 'product_id', nullable: false)]
     private ?products $product_id = null;
 
     public function getId(): ?int

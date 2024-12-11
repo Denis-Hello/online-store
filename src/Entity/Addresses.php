@@ -5,7 +5,6 @@ namespace App\Entity;
 use App\Repository\AddressesRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-use PHPUnit\Util\Type;
 
 #[ORM\Entity(repositoryClass: AddressesRepository::class)]
 class Addresses
@@ -15,20 +14,20 @@ class Addresses
     #[ORM\Column(type: Types::INTEGER)]
     private ?int $id = null;
 
-    #[ORM\Column(type: Types::STRING,length: 255)]
+    #[ORM\Column(type: Types::STRING, length: 255)]
     private ?string $region = null;
 
-    #[ORM\Column(type: Types::STRING,length: 255)]
+    #[ORM\Column(type: Types::STRING, length: 255)]
     private ?string $city = null;
 
-    #[ORM\Column(type: Types::STRING,length: 255)]
+    #[ORM\Column(type: Types::STRING, length: 255)]
     private ?string $street = null;
 
-    #[ORM\Column(type: Types::STRING,length: 255)]
+    #[ORM\Column(type: Types::STRING, length: 255)]
     private ?string $house_number = null;
 
     #[ORM\ManyToOne]
-    #[ORM\JoinColumn(name: "user_id", nullable: false)]
+    #[ORM\JoinColumn(name: 'user_id', nullable: false)]
     private ?user $user_id = null;
 
     public function getId(): ?int

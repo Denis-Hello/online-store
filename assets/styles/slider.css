@@ -1,0 +1,47 @@
+.swiper {
+    width: 100%;
+}
+
+.hero__slider-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero__slider {
+    position: absolute;
+    height: 100%;
+}
+
+.hero__slider-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.hero__slider-content {
+    position: relative;
+    padding-top: 200px;
+    padding-bottom: 450px;
+    z-index: 10;
+}
+
+.hero__senior-title {
+    margin-bottom: 80px;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.hero__slider-link {
+    padding: 16px 72px;
+    border-radius: 10px;
+    background-color: var(--white);
+    color: var(--dark);
+    font-weight: 600;
+    transition: color 0.15s ease-in-out;
+}
+
+.hero__slider-link:hover {
+    color: var(--purple);
+}

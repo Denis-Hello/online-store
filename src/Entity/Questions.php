@@ -5,7 +5,6 @@ namespace App\Entity;
 use App\Repository\QuestionsRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-use PHPUnit\Util\Type;
 
 #[ORM\Entity(repositoryClass: QuestionsRepository::class)]
 class Questions
@@ -22,11 +21,11 @@ class Questions
     private ?\DateTimeImmutable $created_at = null;
 
     #[ORM\ManyToOne(inversedBy: 'questions')]
-    #[ORM\JoinColumn(name: "product_id", nullable: false)]
+    #[ORM\JoinColumn(name: 'product_id', nullable: false)]
     private ?products $product_id = null;
 
     #[ORM\ManyToOne]
-    #[ORM\JoinColumn(name: "user_id", nullable: false)]
+    #[ORM\JoinColumn(name: 'user_id', nullable: false)]
     private ?user $user_id = null;
 
     public function getId(): ?int
@@ -81,6 +80,4 @@ class Questions
 
         return $this;
     }
-
-
 }

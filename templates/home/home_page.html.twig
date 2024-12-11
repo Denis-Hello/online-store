@@ -1,0 +1,67 @@
+{% extends 'base.html.twig'%}
+{% block importmap %}{{ importmap(['app','slider']) }}{% endblock %}
+{% block main %}
+
+    <main>
+        <section class="hero">
+            <div class="hero__slider-box">
+                <div class="swiper hero__slider">
+                    <div class="swiper-wrapper hero__slider-wrapper">
+                        <div class="swiper-slide hero__slider-slide">
+                            <img class="hero__slider-img" src="{{ asset('images/hero/buner_1.jpg') }}">
+                        </div>
+                        <div class="swiper-slide hero__slider-slide">
+                            <img class="hero__slider-img" src="{{ asset('images/hero/buner_2.jpg') }}">
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__slider-content">
+                    <div class="container">
+                        <h1 class="hero__senior-title">
+                            Твой стиль в одном клике
+                        </h1>
+                        <a href="#" class="hero__slider-link">За покупками!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="compositions">
+            <div class="container compositions__container">
+                <div class="compositions__block-one">
+                    <img class="compositions__img" src="{{ asset('images/compositions/compositions_1.jpg') }}">
+                    <div class="compositions__block-content">
+                        <span class="compositions__title-one">
+                            низкая цена
+                        </span>
+                        <h3 class="compositions__hero-title">
+                            Высокий уровень уюта
+                        </h3>
+                        <span class="compositions__title-two">
+                            СКИДКА ДО 50%
+                        </span>
+                        <a class="compositions__block-link">
+                            Исследуйте предметы
+                        </a>
+                    </div>
+                </div>
+                <div class="compositions__block-two">
+                    <img class="compositions__img" src="{{ asset('images/compositions/compositions_2.jpg') }}">
+                    <div class="compositions__block-content">
+                        <span class="compositions__title-one">
+                            Новые подаркиs
+                        </span>
+                        <h3 class="compositions__hero-title">
+                            Стиль ветреннего лета
+                        </h3>
+                        <span class="compositions__title-two">
+                            СКИДКА ДО 50%
+                        </span>
+                        <a class="compositions__block-link">
+                            Исследуйте предметы
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

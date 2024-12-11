@@ -18,11 +18,11 @@ class ProductSizes
     private ?int $stock = null;
 
     #[ORM\OneToOne]
-    #[ORM\JoinColumn(name: "product_id", nullable: false)]
+    #[ORM\JoinColumn(name: 'product_id', nullable: false)]
     private ?products $product_id = null;
 
     #[ORM\OneToOne]
-    #[ORM\JoinColumn(name: "size_id", nullable: false)]
+    #[ORM\JoinColumn(name: 'size_id', nullable: false)]
     private ?sizes $size_id = null;
 
     public function getId(): ?int
