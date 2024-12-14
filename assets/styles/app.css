@@ -314,7 +314,7 @@ p {
 
 /**********hero**********/
 
-.hero {
+.hero__slider-box {
     margin-bottom: 130px;
 }
 
@@ -380,4 +380,29 @@ p {
 
 .compositions__block-link:hover {
     color: var(--purple);
+}
+
+/**********NEW**********/
+
+.new__container {
+    margin-bottom: 100px;
+}
+
+.new__head-title {
+    margin-bottom: 70px;
+    margin-left: 20px;
+    position: relative;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.new__head-title::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: -20px;
+    width: 6px;
+    border-radius: 5px;
+    background-color: var(--purple);
 }

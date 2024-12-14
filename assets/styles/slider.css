@@ -1,3 +1,6 @@
+
+/**********HERO_SLIDE**********/
+
 .swiper {
     width: 100%;
 }
@@ -44,4 +47,59 @@
 
 .hero__slider-link:hover {
     color: var(--purple);
+}
+
+/**********NEW_SLIDE**********/
+
+.new__slider {
+    width: 1238px;
+    padding: 0 35px;
+}
+
+.new__img-box {
+    position: relative;
+    min-width: 263px;
+    min-height: 263px;
+    margin-bottom: 33px;
+}
+
+.new__link-card {
+    position: absolute;
+    inset: 0;
+}
+
+.new__img-card {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.new__body-link {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.new__swiper-button-prev {
+    top: 145px;
+    left: 5px;
+}
+
+.new__swiper-button-prev::after {
+    content: '';
+}
+
+.new__swiper-button-prev svg, .new__swiper-button-next svg {
+    width: 20px;
+    height: 20px;
+}
+
+.new__swiper-button-next::after {
+    content: '';
+}
+
+.new__swiper-button-next {
+    top: 145px;
+    right: 5px;
 }
