@@ -1,6 +1,10 @@
 
 /**********HERO_SLIDE**********/
 
+.hero__slider-box {
+    margin-bottom: 130px;
+}
+
 .swiper {
     width: 100%;
 }

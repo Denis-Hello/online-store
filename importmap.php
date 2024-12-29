@@ -32,4 +32,11 @@ return [
     'swiper/bundle' => [
         'version' => '11.1.15',
     ],
+    'nouislider' => [
+        'version' => '15.8.1',
+    ],
+    'nouislider/dist/nouislider.min.css' => [
+        'version' => '15.8.1',
+        'type' => 'css',
+    ],
 ];

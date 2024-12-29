@@ -7,10 +7,10 @@
         <title>{% block title %}Главная страница{% endblock %}</title>
         <link rel="icon" href="{{ asset('images/favicon.png') }}">
         <link rel="stylesheet" href="{{ asset('styles/normalize.css') }}">
-        {% block stylesheets %}{% endblock %}
         {% block javascripts %}
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
+        {% block stylesheets %}{% endblock %}
     </head>
     <body>
         {% block header %}

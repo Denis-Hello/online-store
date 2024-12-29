@@ -1,5 +1,10 @@
 {% extends 'base.html.twig'%}
-{% block importmap %}{{ importmap(['app','slider']) }}{% endblock %}
+{% block importmap %}
+    {{ importmap(['app','slider']) }}
+{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('styles/home.css') }}">
+{% endblock %}
 {% block main %}
 
     <main>
@@ -8,10 +13,10 @@
                 <div class="swiper hero__slider">
                     <div class="swiper-wrapper hero__slider-wrapper">
                         <div class="swiper-slide hero__slider-slide">
-                            <img class="hero__slider-img" src="{{ asset('images/hero/buner_1.jpg') }}">
+                            <img class="hero__slider-img" src="{{ asset('images/home/hero/buner_1.jpg') }}">
                         </div>
                         <div class="swiper-slide hero__slider-slide">
-                            <img class="hero__slider-img" src="{{ asset('images/hero/buner_2.jpg') }}">
+                            <img class="hero__slider-img" src="{{ asset('images/home/hero/buner_2.jpg') }}">
                         </div>
                     </div>
                 </div>
@@ -28,7 +33,7 @@
         <section class="compositions">
             <div class="container compositions__container">
                 <div class="compositions__block-one">
-                    <img class="compositions__img" src="{{ asset('images/compositions/compositions_1.jpg') }}">
+                    <img class="compositions__img" src="{{ asset('images/home/compositions/compositions_1.jpg') }}">
                     <div class="compositions__block-content">
                         <span class="compositions__title-one">
                             низкая цена
@@ -45,7 +50,7 @@
                     </div>
                 </div>
                 <div class="compositions__block-two">
-                    <img class="compositions__img" src="{{ asset('images/compositions/compositions_2.jpg') }}">
+                    <img class="compositions__img" src="{{ asset('images/home/compositions/compositions_2.jpg') }}">
                     <div class="compositions__block-content">
                         <span class="compositions__title-one">
                             Новые подарки
@@ -73,7 +78,7 @@
                         <div class="swiper-slide new__slide">
                             <div class="new__img-box">
                                 <a class="new__link-card" href="#">
-                                    <img class="new__img-card" src="{{ asset('images/new/new_card_1.jpg') }}">
+                                    <img class="new__img-card" src="{{ asset('images/home/new/new_card_1.jpg') }}">
                                 </a>
                             </div>
                             <div class="card-body">
@@ -83,7 +88,7 @@
                         <div class="swiper-slide new__slide">
                             <div class="new__img-box">
                                 <a class="new__link-card" href="#">
-                                    <img class="new__img-card" src="{{ asset('images/new/new_card_2.jpg') }}">
+                                    <img class="new__img-card" src="{{ asset('images/home/new/new_card_2.jpg') }}">
                                 </a>
                             </div>
                             <div class="card-body">
@@ -93,7 +98,7 @@
                         <div class="swiper-slide new__slide">
                             <div class="new__img-box">
                                 <a class="new__link-card" href="#">
-                                    <img class="new__img-card" src="{{ asset('images/new/new_card_3.jpg') }}">
+                                    <img class="new__img-card" src="{{ asset('images/home/new/new_card_3.jpg') }}">
                                 </a>
                             </div>
                             <div class="card-body">
@@ -103,7 +108,7 @@
                         <div class="swiper-slide new__slide">
                             <div class="new__img-box">
                                 <a class="new__link-card" href="#">
-                                    <img class="new__img-card" src="{{ asset('images/new/new_card_4.jpg') }}">
+                                    <img class="new__img-card" src="{{ asset('images/home/new/new_card_4.jpg') }}">
                                 </a>
                             </div>
                             <div class="card-body">
@@ -113,7 +118,7 @@
                         <div class="swiper-slide new__slide">
                             <div class="new__img-box">
                                 <a class="new__link-card" href="#">
-                                    <img class="new__img-card" src="{{ asset('images/new/provisional.jpg') }}">
+                                    <img class="new__img-card" src="{{ asset('images/home/new/provisional.jpg') }}">
                                 </a>
                             </div>
                             <div class="card-body">
@@ -123,7 +128,7 @@
                         <div class="swiper-slide new__slide">
                             <div class="new__img-box">
                                 <a class="new__link-card" href="#">
-                                    <img class="new__img-card" src="{{ asset('images/new/provisional.jpg') }}">
+                                    <img class="new__img-card" src="{{ asset('images/home/new/provisional.jpg') }}">
                                 </a>
                             </div>
                             <div class="card-body">
@@ -133,7 +138,7 @@
                         <div class="swiper-slide new__slide">
                             <div class="new__img-box">
                                 <a class="new__link-card" href="#">
-                                    <img class="new__img-card" src="{{ asset('images/new/provisional.jpg') }}">
+                                    <img class="new__img-card" src="{{ asset('images/home/new/provisional.jpg') }}">
                                 </a>
                             </div>
                             <div class="card-body">
@@ -143,7 +148,7 @@
                         <div class="swiper-slide new__slide">
                             <div class="new__img-box">
                                 <a class="new__link-card" href="#">
-                                    <img class="new__img-card" src="{{ asset('images/new/provisional.jpg') }}">
+                                    <img class="new__img-card" src="{{ asset('images/home/new/provisional.jpg') }}">
                                 </a>
                             </div>
                             <div class="card-body">
@@ -164,5 +169,481 @@
                 </div>
             </div>
         </section>
+        <section class="sale">
+            <div class="container sale__container">
+                <h2 class="sale__head-title">
+                    Большая зона распродажи
+                </h2>
+                <div class="sale__top-box">
+                    <div class="sale__top-box-card">
+                        <img src="{{ asset('images/home/sale/sale_card_1.jpg') }}">
+                        <div class="sale__box-content">
+                            <h3 class="sale__title">
+                                Гавайские Рубашки
+                            </h3>
+                            <span class="sale__second-title">
+                                Одевайтесь по-летнему
+                            </span>
+                            <span class="sale__offer-title">
+                                СКИДКА ДО 50%
+                            </span>
+                            <span class="sale__img">
+                                <svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.5678 1.28613L11.5678 23.8893M22 15.1958L12.7972 24.3985C12.1182 25.0775 11.0173 25.0775 10.3383 24.3985L1.13557 15.1958" stroke="white" stroke-width="2" stroke-linecap="round"></path>
+                                </svg>
+                            </span>
+                            <a class="sale__link" href="#">
+                                За покупками
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sale__top-box-card">
+                        <img src="{{ asset('images/home/sale/sale_card_2.jpg') }}">
+                        <div class="sale__box-content">
+                            <h3 class="sale__title">
+                                Напечатанный принт
+                            </h3>
+                            <span class="sale__second-title">
+                                Новые Дизайны Каждую неделю
+                            </span>
+                            <span class="sale__offer-title">
+                                СКИДКА ДО 40%
+                            </span>
+                            <span class="sale__img">
+                                <svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.5678 1.28613L11.5678 23.8893M22 15.1958L12.7972 24.3985C12.1182 25.0775 11.0173 25.0775 10.3383 24.3985L1.13557 15.1958" stroke="white" stroke-width="2" stroke-linecap="round"></path>
+                                </svg>
+                            </span>
+                            <a class="sale__link" href="#">
+                                За покупками
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sale__top-box-card">
+                        <img src="{{ asset('images/home/sale/sale_card_3.jpg') }}">
+                        <div class="sale__box-content">
+                            <h3 class="sale__title">
+                                Бег трусцой
+                            </h3>
+                            <span class="sale__second-title">
+                                Двигайтесь со стилем и комфортом
+                            </span>
+                            <span class="sale__offer-title">
+                                СКИДКА ДО 40%
+                            </span>
+                            <span class="sale__img">
+                                <svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.5678 1.28613L11.5678 23.8893M22 15.1958L12.7972 24.3985C12.1182 25.0775 11.0173 25.0775 10.3383 24.3985L1.13557 15.1958" stroke="white" stroke-width="2" stroke-linecap="round"></path>
+                                </svg>
+                            </span>
+                            <a class="sale__link" href="#">
+                                За покупками
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sale__bottom-box">
+                    <div class="sale__bottom-box-card">
+                        <img src="{{ asset('images/home/sale/sale_card_4.jpg') }}">
+                        <div class="sale__box-content sale__bottom-box-content">
+                            <h3 class="sale__title">
+                                Городские Рубашки
+                            </h3>
+                            <span class="sale__second-title">
+                                Живите в Комфорте
+                            </span>
+                            <span class="sale__offer-title">
+                                СКИДКА ДО 60%
+                            </span>
+                            <span class="sale__img">
+                                <svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.5678 1.28613L11.5678 23.8893M22 15.1958L12.7972 24.3985C12.1182 25.0775 11.0173 25.0775 10.3383 24.3985L1.13557 15.1958" stroke="white" stroke-width="2" stroke-linecap="round"></path>
+                                </svg>
+                            </span>
+                            <a class="sale__link" href="#">
+                                За покупками
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sale__bottom-box-card">
+                        <img src="{{ asset('images/home/sale/sale_card_5.jpg') }}">
+                        <div class="sale__box-content sale__bottom-box-content">
+                            <h3 class="sale__title">
+                                Большие размеры футболок
+                            </h3>
+                            <span class="sale__second-title">
+                                Уличный стиль
+                            </span>
+                            <span class="sale__offer-title">
+                                СКИДКА ДО 60%
+                            </span>
+                            <span class="sale__img">
+                                <svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.5678 1.28613L11.5678 23.8893M22 15.1958L12.7972 24.3985C12.1182 25.0775 11.0173 25.0775 10.3383 24.3985L1.13557 15.1958" stroke="white" stroke-width="2" stroke-linecap="round"></path>
+                                </svg>
+                            </span>
+                            <a class="sale__link" href="#">
+                                За покупками
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="men">
+            <div class="container men__container">
+                <h2 class="men__head-title">
+                    Категория мужчин
+                </h2>
+                <div class="men__card-box">
+                    <div class="men__card">
+                        <div class="men__img-box">
+                            <a class="men__link-card" href="#">
+                                <img class="men__img-card" src="{{ asset('images/home/men/men_card_1.jpg') }}">
+                            </a>
+                        </div>
+                        <div class="men__card-body">
+                            <a href="#" class="men__body-link">
+                                <span class="men__link-title-1">
+                                    Рубашки
+                                    <span class="men__link-title-2">
+                                        подробнее
+                                    </span>
+                                </span>
+                                <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.9571 7.71798C19.2843 7.39075 19.2843 6.86022 18.9571 6.533L13.6247 1.20059C13.2975 0.873368 12.7669 0.873368 12.4397 1.20059C12.1125 1.52781 12.1125 2.05835 12.4397 2.38557L17.1796 7.12549L12.4397 11.8654C12.1125 12.1926 12.1125 12.7232 12.4397 13.0504C12.7669 13.3776 13.2975 13.3776 13.6247 13.0504L18.9571 7.71798ZM0.489258 7.9634L18.3646 7.9634V6.28758L0.489258 6.28758L0.489258 7.9634Z" fill="#797979"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="men__card">
+                        <div class="men__img-box">
+                            <a class="men__link-card" href="#">
+                                <img class="men__img-card" src="{{ asset('images/home/men/men_card_2.jpg') }}">
+                            </a>
+                        </div>
+                        <div class="men__card-body">
+                            <a href="#" class="men__body-link">
+                                <span class="men__link-title-1">
+                                    Футболки с принтом
+                                    <span class="men__link-title-2">
+                                        подробнее
+                                    </span>
+                                </span>
+                                <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.9571 7.71798C19.2843 7.39075 19.2843 6.86022 18.9571 6.533L13.6247 1.20059C13.2975 0.873368 12.7669 0.873368 12.4397 1.20059C12.1125 1.52781 12.1125 2.05835 12.4397 2.38557L17.1796 7.12549L12.4397 11.8654C12.1125 12.1926 12.1125 12.7232 12.4397 13.0504C12.7669 13.3776 13.2975 13.3776 13.6247 13.0504L18.9571 7.71798ZM0.489258 7.9634L18.3646 7.9634V6.28758L0.489258 6.28758L0.489258 7.9634Z" fill="#797979"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="men__card">
+                        <div class="men__img-box">
+                            <a class="men__link-card" href="#">
+                                <img class="men__img-card" src="{{ asset('images/home/men/men_card_3.jpg') }}">
+                            </a>
+                        </div>
+                        <div class="men__card-body">
+                            <a href="#" class="men__body-link">
+                                <span class="men__link-title-1">
+                                    Простая футболка
+                                    <span class="men__link-title-2">
+                                        подробнее
+                                    </span>
+                                </span>
+                                <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.9571 7.71798C19.2843 7.39075 19.2843 6.86022 18.9571 6.533L13.6247 1.20059C13.2975 0.873368 12.7669 0.873368 12.4397 1.20059C12.1125 1.52781 12.1125 2.05835 12.4397 2.38557L17.1796 7.12549L12.4397 11.8654C12.1125 12.1926 12.1125 12.7232 12.4397 13.0504C12.7669 13.3776 13.2975 13.3776 13.6247 13.0504L18.9571 7.71798ZM0.489258 7.9634L18.3646 7.9634V6.28758L0.489258 6.28758L0.489258 7.9634Z" fill="#797979"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="men__card">
+                        <div class="men__img-box">
+                            <a class="men__link-card" href="#">
+                                <img class="men__img-card" src="{{ asset('images/home/men/men_card_4.jpg') }}">
+                            </a>
+                        </div>
+                        <div class="men__card-body">
+                            <a href="#" class="men__body-link">
+                                <span class="men__link-title-1">
+                                    Футболка-поло
+                                    <span class="men__link-title-2">
+                                        подробнее
+                                    </span>
+                                </span>
+                                <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.9571 7.71798C19.2843 7.39075 19.2843 6.86022 18.9571 6.533L13.6247 1.20059C13.2975 0.873368 12.7669 0.873368 12.4397 1.20059C12.1125 1.52781 12.1125 2.05835 12.4397 2.38557L17.1796 7.12549L12.4397 11.8654C12.1125 12.1926 12.1125 12.7232 12.4397 13.0504C12.7669 13.3776 13.2975 13.3776 13.6247 13.0504L18.9571 7.71798ZM0.489258 7.9634L18.3646 7.9634V6.28758L0.489258 6.28758L0.489258 7.9634Z" fill="#797979"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="men__card">
+                        <div class="men__img-box">
+                            <a class="men__link-card" href="#">
+                                <img class="men__img-card" src="{{ asset('images/home/men/men_card_5.jpg') }}">
+                            </a>
+                        </div>
+                        <div class="men__card-body">
+                            <a href="#" class="men__body-link">
+                                <span class="men__link-title-1">
+                                    Толстовки и свитшоты
+                                    <span class="men__link-title-2">
+                                        подробнее
+                                    </span>
+                                </span>
+                                <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.9571 7.71798C19.2843 7.39075 19.2843 6.86022 18.9571 6.533L13.6247 1.20059C13.2975 0.873368 12.7669 0.873368 12.4397 1.20059C12.1125 1.52781 12.1125 2.05835 12.4397 2.38557L17.1796 7.12549L12.4397 11.8654C12.1125 12.1926 12.1125 12.7232 12.4397 13.0504C12.7669 13.3776 13.2975 13.3776 13.6247 13.0504L18.9571 7.71798ZM0.489258 7.9634L18.3646 7.9634V6.28758L0.489258 6.28758L0.489258 7.9634Z" fill="#797979"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="men__card">
+                        <div class="men__img-box">
+                            <a class="men__link-card" href="#">
+                                <img class="men__img-card" src="{{ asset('images/home/men/men_card_6.jpg') }}">
+                            </a>
+                        </div>
+                        <div class="men__card-body">
+                            <a href="#" class="men__body-link">
+                                <span class="men__link-title-1">
+                                   Джинсы
+                                    <span class="men__link-title-2">
+                                        подробнее
+                                    </span>
+                                </span>
+                                <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.9571 7.71798C19.2843 7.39075 19.2843 6.86022 18.9571 6.533L13.6247 1.20059C13.2975 0.873368 12.7669 0.873368 12.4397 1.20059C12.1125 1.52781 12.1125 2.05835 12.4397 2.38557L17.1796 7.12549L12.4397 11.8654C12.1125 12.1926 12.1125 12.7232 12.4397 13.0504C12.7669 13.3776 13.2975 13.3776 13.6247 13.0504L18.9571 7.71798ZM0.489258 7.9634L18.3646 7.9634V6.28758L0.489258 6.28758L0.489258 7.9634Z" fill="#797979"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="men__card">
+                        <div class="men__img-box">
+                            <a class="men__link-card" href="#">
+                                <img class="men__img-card" src="{{ asset('images/home/men/men_card_7.jpg') }}">
+                            </a>
+                        </div>
+                        <div class="men__card-body">
+                            <a href="#" class="men__body-link">
+                                <span class="men__link-title-1">
+                                    Спортивная одежда
+                                    <span class="men__link-title-2">
+                                        подробнее
+                                    </span>
+                                </span>
+                                <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.9571 7.71798C19.2843 7.39075 19.2843 6.86022 18.9571 6.533L13.6247 1.20059C13.2975 0.873368 12.7669 0.873368 12.4397 1.20059C12.1125 1.52781 12.1125 2.05835 12.4397 2.38557L17.1796 7.12549L12.4397 11.8654C12.1125 12.1926 12.1125 12.7232 12.4397 13.0504C12.7669 13.3776 13.2975 13.3776 13.6247 13.0504L18.9571 7.71798ZM0.489258 7.9634L18.3646 7.9634V6.28758L0.489258 6.28758L0.489258 7.9634Z" fill="#797979"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="men__card">
+                        <div class="men__img-box">
+                            <a class="men__link-card" href="#">
+                                <img class="men__img-card" src="{{ asset('images/home/men/men_card_8.jpg') }}">
+                            </a>
+                        </div>
+                        <div class="men__card-body">
+                            <a href="#" class="men__body-link">
+                                <span class="men__link-title-1">
+                                    Боксеры
+                                    <span class="men__link-title-2">
+                                        подробнее
+                                    </span>
+                                </span>
+                                <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.9571 7.71798C19.2843 7.39075 19.2843 6.86022 18.9571 6.533L13.6247 1.20059C13.2975 0.873368 12.7669 0.873368 12.4397 1.20059C12.1125 1.52781 12.1125 2.05835 12.4397 2.38557L17.1796 7.12549L12.4397 11.8654C12.1125 12.1926 12.1125 12.7232 12.4397 13.0504C12.7669 13.3776 13.2975 13.3776 13.6247 13.0504L18.9571 7.71798ZM0.489258 7.9634L18.3646 7.9634V6.28758L0.489258 6.28758L0.489258 7.9634Z" fill="#797979"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="woman">
+            <div class="container woman__container">
+                <h2 class="woman__head-title">
+                    Категория женщин
+                </h2>
+                <div class="woman__card-box">
+                    <div class="woman__card">
+                        <div class="woman__img-box">
+                            <a class="woman__link-card" href="#">
+                                <img class="women__img-card" src="{{ asset('images/home/woman/woman_card-1.jpg') }}">
+                            </a>
+                        </div>
+                        <div class="woman__card-body">
+                            <a href="#" class="woman__body-link">
+                                <span class="woman__link-title-1">
+                                    Толстовки и свитшоты
+                                    <span class="woman__link-title-2">
+                                        подробнее
+                                    </span>
+                                </span>
+                                <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.9571 7.71798C19.2843 7.39075 19.2843 6.86022 18.9571 6.533L13.6247 1.20059C13.2975 0.873368 12.7669 0.873368 12.4397 1.20059C12.1125 1.52781 12.1125 2.05835 12.4397 2.38557L17.1796 7.12549L12.4397 11.8654C12.1125 12.1926 12.1125 12.7232 12.4397 13.0504C12.7669 13.3776 13.2975 13.3776 13.6247 13.0504L18.9571 7.71798ZM0.489258 7.9634L18.3646 7.9634V6.28758L0.489258 6.28758L0.489258 7.9634Z" fill="#797979"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="woman__card">
+                        <div class="woman__img-box">
+                            <a class="woman__link-card" href="#">
+                                <img class="women__img-card" src="{{ asset('images/home/woman/woman_card-2.jpg') }}">
+                            </a>
+                        </div>
+                        <div class="woman__card-body">
+                            <a href="#" class="woman__body-link">
+                                <span class="woman__link-title-1">
+                                    Пальто и парки
+                                    <span class="woman__link-title-2">
+                                        подробнее
+                                    </span>
+                                </span>
+                                <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.9571 7.71798C19.2843 7.39075 19.2843 6.86022 18.9571 6.533L13.6247 1.20059C13.2975 0.873368 12.7669 0.873368 12.4397 1.20059C12.1125 1.52781 12.1125 2.05835 12.4397 2.38557L17.1796 7.12549L12.4397 11.8654C12.1125 12.1926 12.1125 12.7232 12.4397 13.0504C12.7669 13.3776 13.2975 13.3776 13.6247 13.0504L18.9571 7.71798ZM0.489258 7.9634L18.3646 7.9634V6.28758L0.489258 6.28758L0.489258 7.9634Z" fill="#797979"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="woman__card">
+                        <div class="woman__img-box">
+                            <a class="woman__link-card" href="#">
+                                <img class="women__img-card" src="{{ asset('images/home/woman/woman_card-3.jpg') }}">
+                            </a>
+                        </div>
+                        <div class="woman__card-body">
+                            <a href="#" class="woman__body-link">
+                                <span class="woman__link-title-1">
+                                    Футболки
+                                    <span class="woman__link-title-2">
+                                        подробнее
+                                    </span>
+                                </span>
+                                <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.9571 7.71798C19.2843 7.39075 19.2843 6.86022 18.9571 6.533L13.6247 1.20059C13.2975 0.873368 12.7669 0.873368 12.4397 1.20059C12.1125 1.52781 12.1125 2.05835 12.4397 2.38557L17.1796 7.12549L12.4397 11.8654C12.1125 12.1926 12.1125 12.7232 12.4397 13.0504C12.7669 13.3776 13.2975 13.3776 13.6247 13.0504L18.9571 7.71798ZM0.489258 7.9634L18.3646 7.9634V6.28758L0.489258 6.28758L0.489258 7.9634Z" fill="#797979"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="woman__card">
+                        <div class="woman__img-box">
+                            <a class="woman__link-card" href="#">
+                                <img class="women__img-card" src="{{ asset('images/home/woman/woman_card-4.jpg') }}">
+                            </a>
+                        </div>
+                        <div class="woman__card-body">
+                            <a href="#" class="woman__body-link">
+                                <span class="woman__link-title-1">
+                                    Боксеры
+                                    <span class="woman__link-title-2">
+                                        подробнее
+                                    </span>
+                                </span>
+                                <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.9571 7.71798C19.2843 7.39075 19.2843 6.86022 18.9571 6.533L13.6247 1.20059C13.2975 0.873368 12.7669 0.873368 12.4397 1.20059C12.1125 1.52781 12.1125 2.05835 12.4397 2.38557L17.1796 7.12549L12.4397 11.8654C12.1125 12.1926 12.1125 12.7232 12.4397 13.0504C12.7669 13.3776 13.2975 13.3776 13.6247 13.0504L18.9571 7.71798ZM0.489258 7.9634L18.3646 7.9634V6.28758L0.489258 6.28758L0.489258 7.9634Z" fill="#797979"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="woman__card">
+                        <div class="woman__img-box">
+                            <a class="woman__link-card" href="#">
+                                <img class="women__img-card" src="{{ asset('images/home/woman/woman_card-5.jpg') }}">
+                            </a>
+                        </div>
+                        <div class="woman__card-body">
+                            <a href="#" class="woman__body-link">
+                                <span class="woman__link-title-1">
+                                    Шапки
+                                    <span class="woman__link-title-2">
+                                        подробнее
+                                    </span>
+                                </span>
+                                <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.9571 7.71798C19.2843 7.39075 19.2843 6.86022 18.9571 6.533L13.6247 1.20059C13.2975 0.873368 12.7669 0.873368 12.4397 1.20059C12.1125 1.52781 12.1125 2.05835 12.4397 2.38557L17.1796 7.12549L12.4397 11.8654C12.1125 12.1926 12.1125 12.7232 12.4397 13.0504C12.7669 13.3776 13.2975 13.3776 13.6247 13.0504L18.9571 7.71798ZM0.489258 7.9634L18.3646 7.9634V6.28758L0.489258 6.28758L0.489258 7.9634Z" fill="#797979"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="woman__card">
+                        <div class="woman__img-box">
+                            <a class="woman__link-card" href="#">
+                                <img class="women__img-card" src="{{ asset('images/home/woman/woman_card-6.jpg') }}">
+                            </a>
+                        </div>
+                        <div class="woman__card-body">
+                            <a href="#" class="woman__body-link">
+                                <span class="woman__link-title-1">
+                                    Джинсы
+                                    <span class="woman__link-title-2">
+                                        подробнее
+                                    </span>
+                                </span>
+                                <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.9571 7.71798C19.2843 7.39075 19.2843 6.86022 18.9571 6.533L13.6247 1.20059C13.2975 0.873368 12.7669 0.873368 12.4397 1.20059C12.1125 1.52781 12.1125 2.05835 12.4397 2.38557L17.1796 7.12549L12.4397 11.8654C12.1125 12.1926 12.1125 12.7232 12.4397 13.0504C12.7669 13.3776 13.2975 13.3776 13.6247 13.0504L18.9571 7.71798ZM0.489258 7.9634L18.3646 7.9634V6.28758L0.489258 6.28758L0.489258 7.9634Z" fill="#797979"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="woman__card">
+                        <div class="woman__img-box">
+                            <a class="woman__link-card" href="#">
+                                <img class="women__img-card" src="{{ asset('images/home/woman/woman_card-7.jpg') }}">
+                            </a>
+                        </div>
+                        <div class="woman__card-body">
+                            <a href="#" class="woman__body-link">
+                                <span class="woman__link-title-1">
+                                    Комбинезон
+                                    <span class="woman__link-title-2">
+                                        подробнее
+                                    </span>
+                                </span>
+                                <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.9571 7.71798C19.2843 7.39075 19.2843 6.86022 18.9571 6.533L13.6247 1.20059C13.2975 0.873368 12.7669 0.873368 12.4397 1.20059C12.1125 1.52781 12.1125 2.05835 12.4397 2.38557L17.1796 7.12549L12.4397 11.8654C12.1125 12.1926 12.1125 12.7232 12.4397 13.0504C12.7669 13.3776 13.2975 13.3776 13.6247 13.0504L18.9571 7.71798ZM0.489258 7.9634L18.3646 7.9634V6.28758L0.489258 6.28758L0.489258 7.9634Z" fill="#797979"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="woman__card">
+                        <div class="woman__img-box">
+                            <a class="woman__link-card" href="#">
+                                <img class="women__img-card" src="{{ asset('images/home/woman/woman_card-8.jpg') }}">
+                            </a>
+                        </div>
+                        <div class="woman__card-body">
+                            <a href="#" class="woman__body-link">
+                                <span class="woman__link-title-1">
+                                    Джемпер
+                                    <span class="woman__link-title-2">
+                                        подробнее
+                                    </span>
+                                </span>
+                                <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.9571 7.71798C19.2843 7.39075 19.2843 6.86022 18.9571 6.533L13.6247 1.20059C13.2975 0.873368 12.7669 0.873368 12.4397 1.20059C12.1125 1.52781 12.1125 2.05835 12.4397 2.38557L17.1796 7.12549L12.4397 11.8654C12.1125 12.1926 12.1125 12.7232 12.4397 13.0504C12.7669 13.3776 13.2975 13.3776 13.6247 13.0504L18.9571 7.71798ZM0.489258 7.9634L18.3646 7.9634V6.28758L0.489258 6.28758L0.489258 7.9634Z" fill="#797979"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
 {% endblock %}

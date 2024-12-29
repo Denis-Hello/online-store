@@ -11,6 +11,6 @@ class test extends AbstractController
     #[Route('/test')]
     public function go(): Response
     {
-        return $this->render('home/home_page.html.twig');
+        return $this->render('gallery/gallery_page.html.twig');
     }
 }

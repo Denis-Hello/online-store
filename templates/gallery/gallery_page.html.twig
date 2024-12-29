@@ -1,0 +1,287 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('styles/gallery.css') }}">
+{% endblock %}
+
+{% block main %}
+    <main>
+        <div class="container">
+            <div class="gallery">
+                <div class="gallery__left">
+                    <div class="gallery__left-head">
+                        <h2 class="gallery__left-title">Фильтр</h2>
+                        <svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.83333 6.33333L2.83333 1.75M2.83333 18.25L2.83333 10M13.8333 18.25L13.8333 10M8.33333 18.25V13.6667M8.33333 10V1.75M13.8333 6.33333L13.8333 1.75M1 6.33333H4.66667M6.5 13.6667H10.1667M12 6.33333L15.6667 6.33333" stroke="#807D7E" stroke-width="1.8" stroke-linecap="round"></path>
+                        </svg>
+                    </div>
+                    <div class="gallery__left-category">
+                        <h3 class="gallery__left-category-title">
+                            Категории
+                        </h3>
+                        <ul class="gallery__left-list list-reset">
+                            <li class="gallery__left-item">
+                                <a href="#" class="gallery__left-link">
+                                    <span class="gallyery__left-link-title">
+                                        "название категорий"
+                                    </span>
+                                    <span class="gallery__left-link-svg">
+                                        <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 11.7415L5.73782 7.00373C6.08739 6.65416 6.08739 6.08739 5.73782 5.73782L1 1" stroke="#8A8989" stroke-width="1.8" stroke-linecap="round"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="gallery__left-item">
+                                <a href="#" class="gallery__left-link">
+                                    <span class="gallyery__left-link-title">
+                                        "название категорий"
+                                    </span>
+                                    <span class="gallery__left-link-svg">
+                                        <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 11.7415L5.73782 7.00373C6.08739 6.65416 6.08739 6.08739 5.73782 5.73782L1 1" stroke="#8A8989" stroke-width="1.8" stroke-linecap="round"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="gallery__left-item">
+                                <a href="#" class="gallery__left-link">
+                                    <span class="gallyery__left-link-title">
+                                        "название категорий"
+                                    </span>
+                                    <span class="gallery__left-link-svg">
+                                        <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 11.7415L5.73782 7.00373C6.08739 6.65416 6.08739 6.08739 5.73782 5.73782L1 1" stroke="#8A8989" stroke-width="1.8" stroke-linecap="round"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="gallery__left-price">
+                        <h3 class="gallery__left-price-title">
+                            Цена
+                        </h3>
+                        <div class="gallery__left-price-slide" id="range-slider"></div>
+                        <div class="gallery__left-price-box">
+                            <label class="gallery__left-price-label">
+                                <span class="gallery__left-price-text">от</span>
+                                <input type="number" min="0" max="10000" class="gallery__left-input" id="input-1">
+                            </label>
+                            <label class="gallery__left-price-label">
+                                <span class="gallery__left-price-text">до</span>
+                                <input type="number" min="0" max="10000" class="gallery__left-input" id="input-2">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="gallery__left-size">
+                        <h3 class="gallery__left-size-title">
+                            Размер
+                        </h3>
+                        <ul class="gallery__left-size-list list-reset">
+                            <li class="gallery__left-size-item">
+                                <a href="#" class="gallery__left-size-link">
+                                    X
+                                </a>
+                            </li>
+                            <li class="gallery__left-size-item">
+                                <a href="#" class="gallery__left-size-link">
+                                    XL
+                                </a>
+                            </li>
+                            <li class="gallery__left-size-item">
+                                <a href="#" class="gallery__left-size-link">
+                                    XLL
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="gallery__right">
+                    <div class="gallery__right-head">
+                        <h2 class="gallery__right-title">
+                            "Название раздела"
+                        </h2>
+                        <div class="gallery__right-box">
+                            <a href="#" class="gallery__right-box-link">
+                                Новинки
+                            </a>
+                            <a href="#" class="gallery__right-box-link">
+                                Рекомендации
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gallery__right-card-box">
+                        <div class="gallery__card">
+                            <div class="gallery__img-box">
+                                <a class="gallery__link-card" href="#">
+                                    <img class="gallery__img-card" src="{{ asset('images/gallery/gallery_right/card_1.jpg') }}">
+                                </a>
+                            </div>
+                            <span class="gallery__like-box">
+                                <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.71983 2.7123C6.34501 1.1101 4.0524 0.679115 2.32985 2.14625C0.607289 3.61339 0.364777 6.06637 1.71751 7.80155C2.84222 9.24424 6.24597 12.287 7.36154 13.2718C7.48635 13.382 7.54875 13.4371 7.62155 13.4587C7.68508 13.4776 7.75459 13.4776 7.81812 13.4587C7.89092 13.4371 7.95332 13.382 8.07813 13.2718C9.19369 12.287 12.5974 9.24424 13.7222 7.80155C15.0749 6.06637 14.862 3.59795 13.1098 2.14625C11.3577 0.694548 9.09466 1.1101 7.71983 2.7123Z" stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                            <div class="gallery__card-body">
+                                <a href="#" class="gallery__body-link">
+                                <span class="gallery__link-title-1">
+                                    Рубашки
+                                    <span class="gallery__link-title-2">
+                                        подробнее
+                                    </span>
+                                </span>
+                                    <span class="gallery__link-price">
+                                        3500
+                                        <svg width="15" height="15"  viewBox="0 0 36 36" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <path d="M20.57,20A8.23,8.23,0,0,0,29,12a8.23,8.23,0,0,0-8.43-8H12a1,1,0,0,0-1,1V18H9a1,1,0,0,0,0,2h2v2H9a1,1,0,0,0,0,2h2v7a1,1,0,0,0,2,0V24h9a1,1,0,0,0,0-2H13V20ZM13,6h7.57A6.24,6.24,0,0,1,27,12a6.23,6.23,0,0,1-6.43,6H13Z"  class="clr-i-outline clr-i-outline-path-1" transform="translate(0, 4)"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery__card">
+                            <div class="gallery__img-box">
+                                <a class="gallery__link-card" href="#">
+                                    <img class="gallery__img-card" src="{{ asset('images/gallery/gallery_right/card_2.jpg') }}">
+                                </a>
+                            </div>
+                            <span class="gallery__like-box">
+                                <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.71983 2.7123C6.34501 1.1101 4.0524 0.679115 2.32985 2.14625C0.607289 3.61339 0.364777 6.06637 1.71751 7.80155C2.84222 9.24424 6.24597 12.287 7.36154 13.2718C7.48635 13.382 7.54875 13.4371 7.62155 13.4587C7.68508 13.4776 7.75459 13.4776 7.81812 13.4587C7.89092 13.4371 7.95332 13.382 8.07813 13.2718C9.19369 12.287 12.5974 9.24424 13.7222 7.80155C15.0749 6.06637 14.862 3.59795 13.1098 2.14625C11.3577 0.694548 9.09466 1.1101 7.71983 2.7123Z" stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                            <div class="gallery__card-body">
+                                <a href="#" class="gallery__body-link">
+                                <span class="gallery__link-title-1">
+                                    Рубашки
+                                    <span class="gallery__link-title-2">
+                                        подробнее
+                                    </span>
+                                </span>
+                                    <span class="gallery__link-price">
+                                        3500
+                                        <svg width="15" height="15"  viewBox="0 0 36 36" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <path d="M20.57,20A8.23,8.23,0,0,0,29,12a8.23,8.23,0,0,0-8.43-8H12a1,1,0,0,0-1,1V18H9a1,1,0,0,0,0,2h2v2H9a1,1,0,0,0,0,2h2v7a1,1,0,0,0,2,0V24h9a1,1,0,0,0,0-2H13V20ZM13,6h7.57A6.24,6.24,0,0,1,27,12a6.23,6.23,0,0,1-6.43,6H13Z"  class="clr-i-outline clr-i-outline-path-1" transform="translate(0, 4)"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery__card">
+                            <div class="gallery__img-box">
+                                <a class="gallery__link-card" href="#">
+                                    <img class="gallery__img-card" src="{{ asset('images/gallery/gallery_right/card_3.jpg') }}">
+                                </a>
+                            </div>
+                            <span class="gallery__like-box">
+                                <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.71983 2.7123C6.34501 1.1101 4.0524 0.679115 2.32985 2.14625C0.607289 3.61339 0.364777 6.06637 1.71751 7.80155C2.84222 9.24424 6.24597 12.287 7.36154 13.2718C7.48635 13.382 7.54875 13.4371 7.62155 13.4587C7.68508 13.4776 7.75459 13.4776 7.81812 13.4587C7.89092 13.4371 7.95332 13.382 8.07813 13.2718C9.19369 12.287 12.5974 9.24424 13.7222 7.80155C15.0749 6.06637 14.862 3.59795 13.1098 2.14625C11.3577 0.694548 9.09466 1.1101 7.71983 2.7123Z" stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                            <div class="gallery__card-body">
+                                <a href="#" class="gallery__body-link">
+                                <span class="gallery__link-title-1">
+                                    Рубашки
+                                    <span class="gallery__link-title-2">
+                                        подробнее
+                                    </span>
+                                </span>
+                                    <span class="gallery__link-price">
+                                        3500
+                                        <svg width="15" height="15"  viewBox="0 0 36 36" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <path d="M20.57,20A8.23,8.23,0,0,0,29,12a8.23,8.23,0,0,0-8.43-8H12a1,1,0,0,0-1,1V18H9a1,1,0,0,0,0,2h2v2H9a1,1,0,0,0,0,2h2v7a1,1,0,0,0,2,0V24h9a1,1,0,0,0,0-2H13V20ZM13,6h7.57A6.24,6.24,0,0,1,27,12a6.23,6.23,0,0,1-6.43,6H13Z"  class="clr-i-outline clr-i-outline-path-1" transform="translate(0, 4)"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery__card">
+                            <div class="gallery__img-box">
+                                <a class="gallery__link-card" href="#">
+                                    <img class="gallery__img-card" src="{{ asset('images/gallery/gallery_right/card_4.jpg') }}">
+                                </a>
+                            </div>
+                            <span class="gallery__like-box">
+                                <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.71983 2.7123C6.34501 1.1101 4.0524 0.679115 2.32985 2.14625C0.607289 3.61339 0.364777 6.06637 1.71751 7.80155C2.84222 9.24424 6.24597 12.287 7.36154 13.2718C7.48635 13.382 7.54875 13.4371 7.62155 13.4587C7.68508 13.4776 7.75459 13.4776 7.81812 13.4587C7.89092 13.4371 7.95332 13.382 8.07813 13.2718C9.19369 12.287 12.5974 9.24424 13.7222 7.80155C15.0749 6.06637 14.862 3.59795 13.1098 2.14625C11.3577 0.694548 9.09466 1.1101 7.71983 2.7123Z" stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                            <div class="gallery__card-body">
+                                <a href="#" class="gallery__body-link">
+                                <span class="gallery__link-title-1">
+                                    Рубашки
+                                    <span class="gallery__link-title-2">
+                                        подробнее
+                                    </span>
+                                </span>
+                                    <span class="gallery__link-price">
+                                        3500
+                                        <svg width="15" height="15"  viewBox="0 0 36 36" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <path d="M20.57,20A8.23,8.23,0,0,0,29,12a8.23,8.23,0,0,0-8.43-8H12a1,1,0,0,0-1,1V18H9a1,1,0,0,0,0,2h2v2H9a1,1,0,0,0,0,2h2v7a1,1,0,0,0,2,0V24h9a1,1,0,0,0,0-2H13V20ZM13,6h7.57A6.24,6.24,0,0,1,27,12a6.23,6.23,0,0,1-6.43,6H13Z"  class="clr-i-outline clr-i-outline-path-1" transform="translate(0, 4)"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery__card">
+                            <div class="gallery__img-box">
+                                <a class="gallery__link-card" href="#">
+                                    <img class="gallery__img-card" src="{{ asset('images/gallery/gallery_right/card_5.jpg') }}">
+                                </a>
+                            </div>
+                            <span class="gallery__like-box">
+                                <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.71983 2.7123C6.34501 1.1101 4.0524 0.679115 2.32985 2.14625C0.607289 3.61339 0.364777 6.06637 1.71751 7.80155C2.84222 9.24424 6.24597 12.287 7.36154 13.2718C7.48635 13.382 7.54875 13.4371 7.62155 13.4587C7.68508 13.4776 7.75459 13.4776 7.81812 13.4587C7.89092 13.4371 7.95332 13.382 8.07813 13.2718C9.19369 12.287 12.5974 9.24424 13.7222 7.80155C15.0749 6.06637 14.862 3.59795 13.1098 2.14625C11.3577 0.694548 9.09466 1.1101 7.71983 2.7123Z" stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                            <div class="gallery__card-body">
+                                <a href="#" class="gallery__body-link">
+                                <span class="gallery__link-title-1">
+                                    Рубашки
+                                    <span class="gallery__link-title-2">
+                                        подробнее
+                                    </span>
+                                </span>
+                                    <span class="gallery__link-price">
+                                        3500
+                                        <svg width="15" height="15"  viewBox="0 0 36 36" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <path d="M20.57,20A8.23,8.23,0,0,0,29,12a8.23,8.23,0,0,0-8.43-8H12a1,1,0,0,0-1,1V18H9a1,1,0,0,0,0,2h2v2H9a1,1,0,0,0,0,2h2v7a1,1,0,0,0,2,0V24h9a1,1,0,0,0,0-2H13V20ZM13,6h7.57A6.24,6.24,0,0,1,27,12a6.23,6.23,0,0,1-6.43,6H13Z"  class="clr-i-outline clr-i-outline-path-1" transform="translate(0, 4)"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery__card">
+                            <div class="gallery__img-box">
+                                <a class="gallery__link-card" href="#">
+                                    <img class="gallery__img-card" src="{{ asset('images/gallery/gallery_right/card_6.jpg') }}">
+                                </a>
+                            </div>
+                            <span class="gallery__like-box">
+                                <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.71983 2.7123C6.34501 1.1101 4.0524 0.679115 2.32985 2.14625C0.607289 3.61339 0.364777 6.06637 1.71751 7.80155C2.84222 9.24424 6.24597 12.287 7.36154 13.2718C7.48635 13.382 7.54875 13.4371 7.62155 13.4587C7.68508 13.4776 7.75459 13.4776 7.81812 13.4587C7.89092 13.4371 7.95332 13.382 8.07813 13.2718C9.19369 12.287 12.5974 9.24424 13.7222 7.80155C15.0749 6.06637 14.862 3.59795 13.1098 2.14625C11.3577 0.694548 9.09466 1.1101 7.71983 2.7123Z" stroke="#3C4242" stroke-width="1.26066" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                            <div class="gallery__card-body">
+                                <a href="#" class="gallery__body-link">
+                                <span class="gallery__link-title-1">
+                                    Рубашки
+                                    <span class="gallery__link-title-2">
+                                        подробнее
+                                    </span>
+                                </span>
+                                    <span class="gallery__link-price">
+                                        3500
+                                        <svg width="15" height="15"  viewBox="0 0 36 36" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <path d="M20.57,20A8.23,8.23,0,0,0,29,12a8.23,8.23,0,0,0-8.43-8H12a1,1,0,0,0-1,1V18H9a1,1,0,0,0,0,2h2v2H9a1,1,0,0,0,0,2h2v7a1,1,0,0,0,2,0V24h9a1,1,0,0,0,0-2H13V20ZM13,6h7.57A6.24,6.24,0,0,1,27,12a6.23,6.23,0,0,1-6.43,6H13Z"  class="clr-i-outline clr-i-outline-path-1" transform="translate(0, 4)"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

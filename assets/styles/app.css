@@ -100,11 +100,17 @@ p {
     justify-content: space-between;
 }
 
+.header__logo {
+    margin-right: 5px;
+    flex-shrink: 0;
+}
+
 .header__logo-link:focus {
     outline: var(--purple) solid 1px;
 }
 
 .header__nav-container {
+    margin-right: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -152,6 +158,10 @@ p {
 .header__search-form {
     display: inline-flex;
     flex-grow: 1;
+}
+
+.header__search-box {
+    margin-right: 5px;
 }
 
 .header__search {
@@ -204,6 +214,10 @@ p {
     justify-content: space-between;
     align-items: center;
     flex-grow: 1;
+}
+
+.header__button-item:not(:last-child) {
+    margin-right: 5px;
 }
 
 .header__button-items {
@@ -310,99 +324,4 @@ p {
     font-size: 18px;
     font-weight: 700;
     color: var(--white);
-}
-
-/**********hero**********/
-
-.hero__slider-box {
-    margin-bottom: 130px;
-}
-
-/**********Compositions**********/
-
-.compositions__container {
-    margin-bottom: 100px;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.compositions__block-one, .compositions__block-two {
-    position: relative;
-    overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 0 20px 0 var(--gray);
-}
-
-.compositions__img {
-    height: 100%;
-    object-fit: cover;
-}
-
-.compositions__block-content {
-    max-width: 300px;
-    position: absolute;
-    top: 65px;
-    left: 28px;
-    z-index: 10;
-}
-
-.compositions__title-one {
-    display: block;
-    margin-bottom: 25px;
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--white);
-}
-
-.compositions__hero-title {
-    margin-bottom: 20px;
-    font-size: 34px;
-    font-weight: 700;
-    color: var(--white);
-}
-
-.compositions__title-two {
-    margin-bottom: 42px;
-    display: block;
-    font-size: 16px;
-    color: var(--white);
-}
-
-.compositions__block-link {
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--white);
-    cursor: pointer;
-    text-decoration: underline var(--white);
-    transition: color 0.15s ease-in-out;
-}
-
-.compositions__block-link:hover {
-    color: var(--purple);
-}
-
-/**********NEW**********/
-
-.new__container {
-    margin-bottom: 100px;
-}
-
-.new__head-title {
-    margin-bottom: 70px;
-    margin-left: 20px;
-    position: relative;
-    font-size: 34px;
-    font-weight: 700;
-}
-
-.new__head-title::before {
-    position: absolute;
-    content: '';
-    top: 0;
-    bottom: 0;
-    left: -20px;
-    width: 6px;
-    border-radius: 5px;
-    background-color: var(--purple);
 }
