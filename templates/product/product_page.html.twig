@@ -1,0 +1,93 @@
+{% extends 'base.html.twig' %}
+
+{% block importmap %}
+    {{ importmap(['app','slider']) }}
+{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('styles/product.css') }}">
+{% endblock %}
+
+{% block main %}
+    <main>
+        <div class="container">
+            <div class="product-container_top">
+                <div class="left">
+                    <div class="img-box">
+
+                        <div class="swiper swiper-main">
+                            <div class="swiper-wrapper swiper-main__wrapper">
+                                <div class="swiper-slide swiper-main__slide">Slide 1</div>
+                                <div class="swiper-slide swiper-main__slide">Slide 2</div>
+                                <div class="swiper-slide swiper-main__slide">Slide 3</div>
+                                <div class="swiper-slide swiper-main__slide">Slide 4</div>
+                                <div class="swiper-slide swiper-main__slide">Slide 5</div>
+                                <div class="swiper-slide swiper-main__slide">Slide 6</div>
+                            </div>
+                        </div>
+
+                        <div class="preview">
+                            <div class="swiper swiper-preview">
+                                <div class="swiper-wrapper swiper-preview__wrapper">
+                                    <div class="swiper-slide swiper-preview__slide">Slide 1</div>
+                                    <div class="swiper-slide swiper-preview__slide">Slide 2</div>
+                                    <div class="swiper-slide swiper-preview__slide">Slide 3</div>
+                                    <div class="swiper-slide swiper-preview__slide">Slide 4</div>
+                                    <div class="swiper-slide swiper-preview__slide">Slide 5</div>
+                                    <div class="swiper-slide swiper-preview__slide">Slide 6</div>
+                                </div>
+                            </div>
+                            <div class="preview-button">
+                                <div class="preview-button__prev">
+                                    <img src="{{ asset('images/product/left/stroke-up.svg') }}" alt="" class="preview-button-img">
+                                </div>
+                                <div class="preview-button__next">
+                                    <img src="{{ asset('images/product/left/stroke-down.svg') }}" alt="" class="preview-button-img">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+                </div>
+                <div class="right">
+                    <div class="prev">
+                        <h2 class="prev__title">название вещи</h2>
+                        <div class="prev__rating">сделать зведочки и цифры</div>
+                        <div class="prev__size-box">
+                            <a href="#" class="prev__size-link">сделать кнопки размера</a>
+                            <a href="#" class="prev__size-link">сделать кнопки размера</a>
+                            <a href="#" class="prev__size-link">сделать кнопки размера</a>
+                        </div>
+                        <div class="prev__buy-box">
+                            <a href="#" class="prev__buy-box-link-add">кнопка добавить в корзину</a>
+                            <span class="prev__buy-box-price">цена в виде кнопки</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-container_bottom">
+                <div class="left">
+                    <div class="desc">
+                        <h5 class="desc__title">Описание (заголовок динамичный в зависимости от выбранной вкладки)</h5>
+                        добавить блок с тремя вкладками: описание, комент., вопрос-ответ (скорее всего будет через табы)
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="video">
+                        добавить видео
+                    </div>
+                </div>
+            </div>
+            <div class="history-prev">
+                <h5 class="history-prev-title">Недавно просмотренные</h5>
+                добавить карточки товаров
+            </div>
+        </div>
+    </main>
+{% endblock %}

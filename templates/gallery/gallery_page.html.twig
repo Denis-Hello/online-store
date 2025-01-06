@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
-{% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('styles/gallery.css') }}">
+{% block importmap %}
+    {{ importmap(['app','gallery']) }}
 {% endblock %}
 
 {% block main %}

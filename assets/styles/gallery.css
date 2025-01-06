@@ -115,12 +115,9 @@
 }
 
 .gallery__card {
+    margin-right: 16px;
     position: relative;
     margin-bottom: 50px;
-}
-
-.gallery__card:not(:nth-child(3n)) {
-    margin-right: 16px;
 }
 
 .gallery__img-box {

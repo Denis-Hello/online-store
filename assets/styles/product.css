@@ -1,0 +1,25 @@
+/*-----------------GENERAL-------------------------*/
+
+.product-container_top, .product-container_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left {
+    flex: 1 1 50%;
+}
+
+.right {
+    flex: 1 1 50%;
+    background-color: #0a58ca;
+}
+
+/*-----------------LEFT-------------------------*/
+
+.img-box {
+    height: 785px;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: var(--light_gray);
+}

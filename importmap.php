@@ -20,6 +20,10 @@ return [
         'path' => './assets/js/slider.js',
         'entrypoint' => true,
     ],
+    'gallery' => [
+        'path' => './assets/js/gallery.js',
+        'entrypoint' => true,
+    ],
     '@hotwired/stimulus' => [
         'version' => '3.2.2',
     ],
